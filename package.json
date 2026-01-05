@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "react-native-maps": "^1.26.20"
+  },
+  "devDependencies": {
+    "@react-native-community/cli": "^20.0.2"
   }
 }

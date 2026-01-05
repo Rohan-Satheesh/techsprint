@@ -1,0 +1,28 @@
+{
+  "name": "techsprint-app",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ruidlopes/minimal.js",
+  "author": {
+    "name": "Rui Lopes",
+    "email": "ruidlopes@gmail.com",
+    "url": "http://ruidlopes.com"
+  },
+  "main": "minimal-node",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@react-navigation/native": "^7.1.26",
+    "@react-navigation/native-stack": "^7.9.0",
+    "axios": "^1.13.2",
+    "expo": "^54.0.30",
+    "jsdom": ">=0.1.23",
+    "react-native-gesture-handler": "~2.28.0",
+    "react-native-maps": "1.20.1",
+    "react-native-reanimated": "~4.1.1"
+  },
+  "private": true
+}
