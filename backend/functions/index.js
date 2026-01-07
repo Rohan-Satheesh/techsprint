@@ -140,3 +140,24 @@ exports.handleSOSAlert = onDocumentCreated(
     console.log(`🚨 SOS alert processed for user ${sosData.userId}`);
   }
 );
+
+exports.someApi = functions.https.onRequest((req, res) => {
+  res.json({ message: "Hello from backend" });
+});
+
+const functions = require("firebase-functions");
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+app.get("/health", (req, res) => {
+  res.json({ status: "OK" });
+});
+
+// 👇 THIS LINE MUST BE LAST
+exports.api = functions.https.onRequest(app);
+
+

@@ -2,6 +2,7 @@
 import { View, Text, TextInput, StyleSheet } from "react-native";
 import Card from "../components/Card";
 import { colors } from "../theme/colors";
+import API_BASE_URL from "./api";
 
 export default function HomeScreen() {
   return (
@@ -53,3 +54,21 @@ const styles = StyleSheet.create({
     fontSize: 16
   }
 });
+
+import API_BASE_URL from "./api";
+
+const signupUser = async () => {
+  const res = await fetch(`${API_BASE_URL}/auth/signup`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      email: "test@test.com",
+      password: "123456",
+      name: "Test",
+      phone: "9999999999"
+    })
+  });
+
+  const data = await res.json();
+  console.log(data);
+};
